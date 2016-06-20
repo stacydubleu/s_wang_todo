@@ -1,0 +1,11 @@
+<h1>To Do List Creator</h1>
+<form action="/create" method="POST" autocomplete="off">
+  <input type="text" name="listname" placeholder="list name">
+  <input type="submit">
+</form>
+
+<ul>
+	{{#each data}}
+	<li><a href="/{this.title}/{{this.id}}">{{this.title}}</a></li> <!--anchor tag...data.id will pull out primary key id-->
+	{{/each}}
+</ul>
